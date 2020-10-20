@@ -1,17 +1,17 @@
-
+# Function to display the board
 def display_board(board):
     
-    print(f'   |   |   ')
-    print(f' {board[7]} | {board[8]} | {board[9]} ')
-    print(f'___|___|___')
-    print(f'   |   |   ')
-    print(f' {board[4]} | {board[5]} | {board[6]} ')
-    print(f'___|___|___')
-    print(f'   |   |   ')
-    print(f' {board[1]} | {board[2]} | {board[3]} ')
-    print(f'   |   |   ')
+    print(f'     |     |     ')
+    print(f'  {board[7]}  |  {board[8]}  |  {board[9]}  ')
+    print(f'_____|_____|_____')
+    print(f'     |     |     ')
+    print(f'  {board[4]}  |  {board[5]}  |  {board[6]}  ')
+    print(f'_____|_____|_____')
+    print(f'     |     |     ')
+    print(f'  {board[1]}  |  {board[2]}  |  {board[3]}  ')
+    print(f'     |     |     ')
 
-
+# Taking input from player
 def player_input(player):
     check=True
     while(check):
@@ -21,11 +21,11 @@ def player_input(player):
         else:
             print('Wrong input.')
     return position
-
+# Mark the selected place by the makker selected by the player
 def place_marker(board, marker, position):
     
     board[position]=marker
-
+# Checking the board, if any one is win or not
 def win_check(board, mark):
     check=False
     def w_check(p1,p2,p3):
@@ -56,17 +56,17 @@ def full_board_check(board):
     return ' ' not in board
 
 def replay():
-    check=input('Do you want play again yes or no : ')
+    check=input('Do you want play again yes/no : ')
     if check=='yes':
         return True
     else:
         return False
        
-print('Welcome to Tic Tac Toe!')
+print('Welcome to Tic Tac Toe Game!')
 
 while True:
     # Set the game up here
-    #pass
+  
     player1 = input("Please pick a marker 'X' or 'O' for player 1 : ")
     player2 = ''
     if player1=='X':
